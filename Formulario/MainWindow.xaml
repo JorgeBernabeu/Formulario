@@ -1,0 +1,161 @@
+﻿<Window x:Class="Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Formulario"
+        mc:Ignorable="d"
+        Title="Formulario"
+        MinHeight="450"
+        MinWidth="800"
+        Height="450"
+        Width="800"
+        Icon="assets/54.ico">
+
+    <DockPanel>
+
+        <TextBlock DockPanel.Dock="Top"
+                   HorizontalAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">Formulario</TextBlock>
+
+        <DockPanel LastChildFill="False"
+                   DockPanel.Dock="Bottom"
+                   Margin="5">
+
+            <TextBlock DockPanel.Dock="Left"
+                       TextDecorations="{x:Null}"
+                       FontSize="22"
+                       FontFamily="Freestyle Script"
+                       Foreground="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}">Jorge Bernabeu</TextBlock>
+
+            <Button DockPanel.Dock="Right"
+                    Content="Cancelar"
+                    Padding="15, 3, 15, 3"></Button>
+
+            <Button DockPanel.Dock="Right"
+                    Content="Aceptar"
+                    Margin="0, 0 , 4, 0"
+                    Padding="15, 3, 15, 3"></Button>
+
+        </DockPanel>
+
+        <Image Source="foto.jpg"
+               DockPanel.Dock="Right" />
+
+        <StackPanel Orientation="Vertical"
+                    DockPanel.Dock="Left">
+
+            <Border BorderThickness="3"
+                    BorderBrush="Black"
+                    CornerRadius="3"
+                    Margin="10">
+                <Border.Effect>
+                    <DropShadowEffect Opacity="85"></DropShadowEffect></Border.Effect>
+                <StackPanel Background="#FF7BCFE8">
+
+                    <Grid Margin="5, 5, 0, 5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="10*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0">Nombre</TextBlock>
+
+                        <Image Source="info.png"
+                               Height="19"
+                               Width="22"
+                               DockPanel.Dock="Right"
+                               Grid.Column="2"
+                               Grid.Row="0" 
+                               ToolTip="Introduce tu Nombre"/>
+
+                        <TextBox Margin="10, 0 ,0 ,5"
+                                 Grid.Column="1"
+                                 Grid.Row="0"></TextBox>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="1">Edad</TextBlock>
+
+                        <Image Source="info.png"
+                               Height="19"
+                               Width="22"
+                               DockPanel.Dock="Right"
+                               Grid.Column="2"
+                               Grid.Row="1" 
+                               ToolTip="Introduce tu Edad"/>
+
+                        <TextBox Margin="10, 0 ,0 ,5"
+                                 Grid.Column="1"
+                                 Grid.Row="1"></TextBox>
+
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="2">Dirección</TextBlock>
+
+                        <Image Source="info.png"
+                               Height="19"
+                               Width="22"
+                               DockPanel.Dock="Right"
+                               Grid.Column="2"
+                               Grid.Row="2" 
+                               ToolTip="Introduce Tu Dirección"/>
+
+                        <TextBox Margin="10, 0 ,0 ,5"
+                                 Grid.Column="1"
+                                 Grid.Row="2"></TextBox>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Border BorderThickness="3"
+                    BorderBrush="Black"
+                    CornerRadius="3"
+                    Margin="10">
+                <Border.Effect>
+                    <DropShadowEffect Opacity="85"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel Background="#FF7BCFE8"
+                            Orientation="Horizontal">
+
+                    <GroupBox Header="Aficiones"
+                              Margin="5"
+                              BorderBrush="#FF0B2AEC">
+                        <StackPanel
+                            Margin="10">
+                            <CheckBox Content="Hacer Deporte" />
+                            <CheckBox Content="Viajar" />
+                            <CheckBox Content="Ver Series" />
+                            <CheckBox Content="Leer Comics" />
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="Estado Civil"
+                              Margin="5"
+                              BorderBrush="#FF0B2AEC">
+                        <StackPanel Margin="10">
+                            <RadioButton GroupName="Estado Civil"
+                                         Content="Soltero" />
+                            <RadioButton GroupName="Estado Civil"
+                                         Content="BB" />
+                            <RadioButton GroupName="Estado Civil"
+                                         Content="Divorciado" />
+                            <RadioButton GroupName="Estado Civil"
+                                         Content="Viudo" />
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+
+    </DockPanel>
+</Window>
