@@ -145,7 +145,7 @@
                             <RadioButton GroupName="Estado Civil"
                                          Content="Soltero" />
                             <RadioButton GroupName="Estado Civil"
-                                         Content="BB" />
+                                         Content="Casado" />
                             <RadioButton GroupName="Estado Civil"
                                          Content="Divorciado" />
                             <RadioButton GroupName="Estado Civil"
